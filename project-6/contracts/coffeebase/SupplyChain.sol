@@ -172,7 +172,7 @@ contract SupplyChain is FarmerRole, ConsumerRole, DistributorRole, RetailerRole,
     newItem.originFarmLatitude = _originFarmLatitude;
     newItem.originFarmLongitude = _originFarmLongitude;
     newItem.productNotes = _productNotes;
-    newItem.itemState = defaultState;//default state us Harvested
+    newItem.itemState = defaultState;//default state is Harvested
     newItem.ownerID = _originFarmerID;
     items[_upc] = newItem;
     // Increment sku
