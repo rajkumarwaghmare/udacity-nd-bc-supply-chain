@@ -160,7 +160,7 @@ contract SupplyChain is FarmerRole, ConsumerRole, DistributorRole, RetailerRole,
   }
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
-  function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public verifyCaller(_originFarmerID)
+  function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public verifyCaller(_originFarmerID) onlyFarmer
   {
     // Add the new item as part of Harvest
     Item memory newItem;
